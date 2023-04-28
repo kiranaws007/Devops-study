@@ -1,0 +1,17 @@
+cd /opt/
+wget tar -xzvf apache-maven-3.9.1-bin.tar.gz
+tar -xzvf apache-maven-3.9.1-bin.tar.gz
+
+#sudo ln -s /opt/apache-maven-3.6.3 /opt/maven
+
+#sudo nano /etc/profile.d/maven.sh
+#readlink -f $(which java)
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.18.0.10-1.amzn2.0.1.x86_64
+export M2_HOME=/opt/apache-maven-3.9.1
+export MAVEN_HOME=/opt/apache-maven-3.9.1
+export PATH=${M2_HOME}/bin:${PATH}
+
+#sudo chmod +x /etc/profile.d/maven.sh
+#source /etc/profile.d/maven.sh
+mvn -v
